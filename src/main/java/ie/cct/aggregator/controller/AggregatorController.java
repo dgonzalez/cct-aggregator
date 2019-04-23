@@ -13,7 +13,7 @@ public class AggregatorController {
     public AggregatorResponse timestamp(@PathVariable Long timestamp) {
         RestTemplate restTemplate = new RestTemplate();
         // RestTemplate will contact the remote server and pull the required data.
-        ResponseEntity<DateRequest> response = restTemplate.getForEntity("http://35.190.155.37/{timestamp}/isodate", DateRequest.class, timestamp);
+        ResponseEntity<DateRequest> response = restTemplate.getForEntity("http://isodate.kubernetes.cafe/{timestamp}/isodate", DateRequest.class, timestamp);
 
         // TODO: You need to modify this class to call the UTC Date Service (same as we did above with the ISO Date Service) and add it to the AggregatorResponse.
 
